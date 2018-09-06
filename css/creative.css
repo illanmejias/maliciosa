@@ -231,14 +231,16 @@ header.masthead p {
   max-width: 400px;
 }
 
-.portfolio-box {
+.portfolio-box,
+.popup-youtube {
   position: relative;
   display: block;
   max-width: 650px;
   margin: 0 auto;
 }
 
-.portfolio-box .portfolio-box-caption {
+.portfolio-box .portfolio-box-caption,
+.popup-youtube .portfolio-box-caption {
   position: absolute;
   bottom: 0;
   display: block;
@@ -253,7 +255,8 @@ header.masthead p {
   transition: all 0.2s;
 }
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content,
+.popup-youtube .portfolio-box-caption .portfolio-box-caption-content {
   position: absolute;
   top: 50%;
   width: 100%;
@@ -262,26 +265,32 @@ header.masthead p {
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name,
+.popup-youtube .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.popup-youtube .portfolio-box-caption .portfolio-box-caption-content .project-name {
   padding: 0 15px;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.popup-youtube .portfolio-box-caption .portfolio-box-caption-content .project-category {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
 }
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name,
+.popup-youtube .portfolio-box-caption .portfolio-box-caption-content .project-name {
   font-size: 18px;
 }
 
-.portfolio-box:hover .portfolio-box-caption {
+.portfolio-box:hover .portfolio-box-caption,
+.popup-youtube:hover .portfolio-box-caption {
   opacity: 1;
 }
 
-.portfolio-box:focus {
+.portfolio-box:focus,
+.popup-youtube:focus {
   outline: none;
 }
 
@@ -290,6 +299,12 @@ header.masthead p {
     font-size: 16px;
   }
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 22px;
+  }
+  .popup-youtube .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    font-size: 16px;
+  }
+  .popup-youtube .portfolio-box-caption .portfolio-box-caption-content .project-name {
     font-size: 22px;
   }
 }

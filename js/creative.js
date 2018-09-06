@@ -58,7 +58,7 @@
 
   // Magnific popup calls
   $('.popup-gallery').magnificPopup({
-    delegate: 'a',
+    delegate: 'a.portfolio-box',
     type: 'image',
     tLoading: 'Loading image #%curr%...',
     mainClass: 'mfp-img-mobile',
@@ -70,6 +70,16 @@
     image: {
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
     }
+  });
+
+$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
   });
 
 })(jQuery); // End of use strict
