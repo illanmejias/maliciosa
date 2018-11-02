@@ -57,6 +57,23 @@
   }, 300);
 
   // Magnific popup calls
+  $.extend(true, $.magnificPopup.defaults, {
+  tClose: 'Cerrar (Esc)', // Alt text on close button
+  tLoading: 'Cargando...', // Text that is displayed during loading. Can contain %curr% and %total% keys
+  gallery: {
+    tPrev: 'Anterior (<)', // Alt text on left arrow
+    tNext: 'Siguiente (>)', // Alt text on right arrow
+    tCounter: '%curr% de %total%' // Markup for "1 of 7" counter
+  },
+  image: {
+    tError: '<a href="%url%">La imagen</a> no ha podido ser cargada.' // Error message when image could not be loaded
+  },
+  ajax: {
+    tError: '<a href="%url%">El contenido</a> no ha podido ser cargado.' // Error message when ajax request failed
+  }
+});
+
+
   $('.popup-gallery').magnificPopup({
     delegate: 'a.portfolio-box',
     type: 'image',
@@ -73,7 +90,7 @@
   });
 
 $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    disableOn: 700,
+    //disableOn: 700,
     type: 'iframe',
     mainClass: 'mfp-fade',
     removalDelay: 160,
